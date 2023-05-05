@@ -33,7 +33,7 @@ export class BidingComponent {
 
     // example 2
           click1:string ="";
-          onclick(){
+          onclick1(){
           this.click1 = "clicked"
           }
           show_html_1=
@@ -51,7 +51,7 @@ export class BidingComponent {
 
          //click using boolean
           click2:boolean= true;
-          onclick1(){
+          onclick2(){
             this.click2 = !this.click2;
           }
           show_html_2=`
@@ -68,10 +68,10 @@ export class BidingComponent {
 
           // click using loop
           click3:number =1;
-          onclick2(){
+          onclick3(){
             this.click3++;
           }
-          onclick2_(){
+          onclick3_(){
             this.click3--
           }
           show_html_3=`
@@ -90,7 +90,46 @@ export class BidingComponent {
                       `
 
           // click using loop
-
     // example 2
 // Event binding
+
+// style binding
+    // style  declear from typescript
+          color="green";
+          bgcolor="red";
+    // style  declear from typescript
+
+
+    //style  declear from typescript
+          err:boolean= true;
+          onclick4(){
+          this.err = !this.err;
+          }
+    //style  declear from typescript
+
+
+    // html
+      show_html_4=`
+            <h2 [style.color]="color">Test color</h2>
+            <h2 [style.backgroundColor]="bgcolor">Test background</h2>
+            `
+      show_html_5=`
+            <h2 [style.backgroundColor]="err ?  'green' : 'red'">Test background</h2>
+            <button mat-raised-button (click)="onclick4()">orange</button>`
+    // html
+
+    // typescript
+      show_ts_4=`
+            color="green";
+            bgcolor="red";
+            `
+      show_ts_5=`
+            err:boolean= true;
+            onclick4(){
+            this.err = !this.err;
+            }
+            `
+    // typescript
+
+// style binding
 }

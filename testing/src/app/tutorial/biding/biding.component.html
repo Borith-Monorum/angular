@@ -54,17 +54,17 @@
             <div class="bg-danger w-100  pt-1 px-3 ">
               <h2 class="text-white">Example 2</h2>
             </div>
-            <p class="m-2">Click on Button to show something </p>
+            <p class="">Click on Button to show something </p>
             <mat-tab-group class="p-2 ">
         <mat-tab label="Result" class="">
-                  <button (click)="onclick()" mat-raised-button>Click me</button>
+                  <button (click)="onclick1()" mat-raised-button>Click me</button>
                   <h2>Result:  {{click1}}</h2>
 
                   <!--  click using boolean -->
                   <div class="bg-secondary w-25  pt-1 mt-5 px-3 ">
                     <h2 class="text-white ">click using boolean</h2>
                   </div>
-                  <button (click)="onclick1()" mat-raised-button>Click me</button>
+                  <button (click)="onclick2()" mat-raised-button>Click me</button>
                   <h2>Result is : {{click2 ? '1' : '2'}}</h2>
                   <!-- click using boolean  -->
 
@@ -72,9 +72,9 @@
                   <div class="bg-secondary w-25  pt-1 mt-5 px-3 ">
                     <h2 class="text-white ">click using loop</h2>
                   </div>
-                  <button mat-raised-button (click)="onclick2()">Add</button>
-                  <button mat-raised-button (click)="onclick2_()">remove</button>
-                  <h2>Result is : {{click3}}</h2>  
+                  <button mat-raised-button (click)="onclick3()">Add</button>
+                  <button mat-raised-button (click)="onclick3_()">remove</button>
+                  <h2>Result is : {{click3}}</h2>
                   <!-- click using loop  -->
 
         </mat-tab>
@@ -107,6 +107,48 @@
       </mat-tab-group>
           <!-- example 2  -->
 <!-- Event binding  -->
-  </div>
+</div>
+<!-- style binding  -->
+      <div class="content">
+        <div class="bg-primary w-100 p-1 pt-3 px-3">
+          <h2 class="text-white">Event binding</h2>
+        </div>
+        <div class="bg-danger w-100  pt-1 px-3 ">
+          <h2 class="text-white">Example 1</h2>
+        </div>
+        <mat-tab-group>
+          <mat-tab label="RESULT">
+            <!--style  declear from typescript  -->
+                  <h2 [style.color]="color">Test color</h2>
+                  <h2 [style.backgroundColor]="bgcolor" class="w-25">Test background</h2>
+            <!--style declear from typescript  -->
+            <!-- change style attribute -->
+            <div class="bg-secondary w-50  pt-1 mt-5 px-3 ">
+              <h2 class="text-white ">change attribute</h2>
+            </div>
+            <h2 [style.backgroundColor]="err ?  'green' : 'red'" class="w-25">Test background</h2>
+            <button mat-raised-button (click)="onclick4()">orange</button>
+            <!-- change style attribute -->
+          </mat-tab>
+          <mat-tab label="HTML">
+            <h1 class="pt-4">Declare from Typescript</h1>
+            <pre><code class="language-html">{{show_html_4}}</code></pre>
+
+            <h1 class="pt-4">change style attribute</h1>
+            <pre><code class="language-html">{{show_html_5}}</code></pre>
+          </mat-tab>
+          <mat-tab label="TYPESCRIPT">
+            <h1 class="pt-4">Declare from Typescript</h1>
+            <pre><code class="language-html">{{show_ts_4}}</code></pre>
+
+            <h1 class="pt-4">change style attribute</h1>
+            <pre><code class="language-html">{{show_ts_5}}</code></pre>
+          </mat-tab>
+
+        </mat-tab-group>
+      </div>
+<!-- style binding  -->
+
+
 </div>
 
