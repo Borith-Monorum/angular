@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.example-container {
+  width: 100px;
+  height: 200px;
+  margin: 10px;
+  // border: 1px solid #555;
+}
+.example-content{
+  width: 200px;
+}
+
+.content{
+  margin-top:30px;
+  overflow: hidden;
+  background-color: #dddddd50;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px #9999;
+}
+pre{
+  background-color: rgba(0, 0, 0, 0.534);
+}
+code{
+font-size: 16px !important;
+}

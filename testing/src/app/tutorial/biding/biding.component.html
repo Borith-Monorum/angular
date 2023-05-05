@@ -1,7 +1,112 @@
-<mat-tab-group class="  ">
-  <mat-tab label="Result">
-    <pre><code class="language-css">{{code}}</code></pre>
-  </mat-tab>
-  <mat-tab label="HTML"> Content 2 </mat-tab>
-  <mat-tab label="TYPESCRIPT"> Content 3 </mat-tab>
-</mat-tab-group>
+<div class="container-fluid">
+<!-- Two way binding -->
+  <div class="content">
+              <!-- example 1  -->
+      <div class="bg-primary w-100 p-1 pt-3 px-3">
+        <h2 class="text-white">Two Way Binding</h2>
+      </div>
+      <p class="m-2">make sure you need to import <mark>MatFormFieldModule</mark> into <mark>app.module.ts</mark>  </p>
+      <div class="bg-danger w-100  pt-1 px-3 ">
+        <h2 class="text-white">Example 1 </h2>
+      </div>
+      <mat-tab-group class="p-2 ">
+        <mat-tab label="Result" class="">
+            <input class="mt-3" matInput type="text"  [(ngModel)]="title">
+            <h2>Result is: {{title}}</h2>
+        </mat-tab>
+        <mat-tab label="HTML">
+          <pre><code class="language-html">{{twowaybiding}}</code></pre>
+        </mat-tab>
+        <mat-tab label="TYPESCRIPT">
+        </mat-tab>
+      </mat-tab-group>
+            <!-- example 1  -->
+  </div>
+<!-- Two way binding -->
+
+<!-- Event binding  -->
+  <div class="content ">
+    <div class="bg-primary w-100 p-1 pt-3 px-3">
+      <h2 class="text-white">Event binding</h2>
+    </div>
+    <p class=" ">Event binding use for ... </p>
+        <!-- example 1 -->
+            <div class="bg-danger w-100  pt-1 px-3 ">
+              <h2 class="text-white">Example 1 </h2>
+            </div>
+            <!-- <p class="m-2">make sure you need to import <mark>MatFormFieldModule</mark> into <mark>app.module.ts</mark>  </p> -->
+            <mat-tab-group class="p-2 ">
+              <mat-tab label="Result" class="">
+                <h2>Result is: {{onewaybiding}}</h2>
+              </mat-tab>
+              <mat-tab label="HTML">
+                <pre><code class="language-html">{{showonewaybiding}}</code></pre>
+              </mat-tab>
+              <mat-tab label="TYPESCRIPT">
+                <pre><code class="language-html">{{showonewaybidingts}}</code></pre>
+              </mat-tab>
+            </mat-tab-group>
+        <!-- example 1 -->
+        <mat-divider class="my-4"></mat-divider>
+
+
+        <!-- example 2  -->
+            <div class="bg-danger w-100  pt-1 px-3 ">
+              <h2 class="text-white">Example 2</h2>
+            </div>
+            <p class="m-2">Click on Button to show something </p>
+            <mat-tab-group class="p-2 ">
+        <mat-tab label="Result" class="">
+                  <button (click)="onclick()" mat-raised-button>Click me</button>
+                  <h2>Result:  {{click1}}</h2>
+
+                  <!--  click using boolean -->
+                  <div class="bg-secondary w-25  pt-1 mt-5 px-3 ">
+                    <h2 class="text-white ">click using boolean</h2>
+                  </div>
+                  <button (click)="onclick1()" mat-raised-button>Click me</button>
+                  <h2>Result is : {{click2 ? '1' : '2'}}</h2>
+                  <!-- click using boolean  -->
+
+                  <!-- click using loop  -->
+                  <div class="bg-secondary w-25  pt-1 mt-5 px-3 ">
+                    <h2 class="text-white ">click using loop</h2>
+                  </div>
+                  <button mat-raised-button (click)="onclick2()">Add</button>
+                  <button mat-raised-button (click)="onclick2_()">remove</button>
+                  <h2>Result is : {{click3}}</h2>  
+                  <!-- click using loop  -->
+
+        </mat-tab>
+        <mat-tab label="HTML">
+                  <pre><code class="language-html">{{show_html_1}}</code></pre>
+
+                  <!-- click using boolean -->
+                  <h1 class="pt-4">click using boolean</h1>
+                  <pre><code class="language-html">{{show_html_2}}</code></pre>
+                  <!-- click using boolean -->
+
+                  <!-- click using loop -->
+                  <h1 class="pt-4">click using loop</h1>
+                  <pre><code class="language-html">{{show_html_3}}</code></pre>
+                  <!-- click using loop -->
+        </mat-tab>
+        <mat-tab label="TYPESCRIPT">
+                  <pre><code class="language-html">{{show_ts_1}}</code></pre>
+
+                    <!-- click using boolean -->
+                        <h1 class="pt-4">click using boolean</h1>
+                        <pre><code class="language-html">{{show_ts_2}}</code></pre>
+                    <!-- click using boolean -->
+
+                    <!-- click using loop -->
+                        <h1 class="pt-4">click using Loop</h1>
+                        <pre><code class="language-html">{{show_ts_3}}</code></pre>
+                    <!-- click using loop -->
+                </mat-tab>
+      </mat-tab-group>
+          <!-- example 2  -->
+<!-- Event binding  -->
+  </div>
+</div>
+
